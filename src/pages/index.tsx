@@ -9,7 +9,7 @@ import { ptBR } from 'date-fns/locale';
 import { useCallback, useState } from 'react';
 import { getPrismicClient } from '../services/prismic';
 
-// import commonStyles from '../styles/common.module.scss';
+import commonStyles from '../styles/common.module.scss';
 import styles from './home.module.scss';
 
 interface IPost {
@@ -75,7 +75,7 @@ export default function Home({ postsPagination }: IHomeProps) {
 
               <h3>{post.data.subtitle}</h3>
 
-              <div>
+              <div className={commonStyles.info}>
                 <div>
                   <FiCalendar />
 
@@ -112,18 +112,6 @@ export const getStaticProps: GetStaticProps = async () => {
       pageSize: 1,
     }
   );
-
-  // const posts = response.results.map<IPost>(post => {
-  //   return {
-  //     uid: post.uid,
-  //     first_publication_date: format(
-  //       new Date(post.first_publication_date),
-  //       'dd MMM yyyy',
-  //       { locale: ptBR }
-  //     ),
-  //     data: post.data,
-  //   };
-  // });
 
   return {
     props: {

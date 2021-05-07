@@ -37,23 +37,4 @@
     font-size: 1.125rem;
     color: var(--gray-100);
   }
-
-  > div {
-    display: flex;
-    margin-top: 1.6rem;
-    color: var(--gray-300);
-    margin-bottom: 3rem;
-
-    > div {
-      display: flex;
-
-      & + div {
-        margin-left: 1.5rem;
-      }
-
-      svg {
-        margin-right: 0.5rem;
-      }
-    }
-  }
 }

@@ -1,4 +1,10 @@
 .Header {
   max-width: 1120px;
   margin: 0 auto;
+  padding: 2.5rem 0;
+
+  > div {
+    max-width: 720px;
+    margin: 0 auto;
+  }
 }
